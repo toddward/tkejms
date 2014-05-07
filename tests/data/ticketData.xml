@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" ?><TicketData xmlns="">
+   <batchID>3903047</batchID>
+   <refreshData>false</refreshData>
+   <source>EBS</source>
+   <employeeID>2022</employeeID>
+   <Ticket rowstate="Added">
+      <ticketID>5744</ticketID>
+      <ticketNumber>1474</ticketNumber>
+      <externalNumber>1474</externalNumber>
+      <externalHostID>5744</externalHostID>
+      <ticketType>ADMS</ticketType>
+      <ticketTypeGrouping>AD</ticketTypeGrouping>
+      <name>DENVER ADMIN</name>
+      <description>DENVER ADMIN</description>
+      <timeWindowStart>2009-01-01T00:00:00.000-06:00</timeWindowStart>
+      <timeWindowEnd/>
+      <scheduledStart/>
+      <scheduledEnd/>
+      <estimatedStart/>
+      <estimatedEnd/>
+      <duration>15</duration>
+      <responseTime/>
+      <dispatchStyle/>
+      <dispatchArea>WEST EAST ZONE 2</dispatchArea>
+      <actualCreationDate/>
+      <severity/>
+      <callerName/>
+      <callerPhoneNumber/>
+      <callerDescription/>
+      <source>EBS</source>
+      <hostSource/>
+      <WFMGroupID/>
+   </Ticket>
+   <Ticket rowstate="Added">
+      <ticketID>27447</ticketID>
+      <ticketNumber>12699</ticketNumber>
+      <externalNumber>12699</externalNumber>
+      <externalHostID>27447</externalHostID>
+      <ticketType>ADMS</ticketType>
+      <ticketTypeGrouping>AD</ticketTypeGrouping>
+      <name>DENVER TUNE UP TALKS 2014</name>
+      <description>DENVER TUNE UP TALKS 2014</description>
+      <timeWindowStart>2014-01-01T00:00:00.000-06:00</timeWindowStart>
+      <timeWindowEnd>2014-12-31T00:00:00.000-06:00</timeWindowEnd>
+      <scheduledStart/>
+      <scheduledEnd/>
+      <estimatedStart/>
+      <estimatedEnd/>
+      <duration>15</duration>
+      <responseTime/>
+      <dispatchStyle/>
+      <dispatchArea>WEST EAST ZONE 2</dispatchArea>
+      <actualCreationDate/>
+      <severity/>
+      <callerName/>
+      <callerPhoneNumber/>
+      <callerDescription/>
+      <source>EBS</source>
+      <hostSource/>
+      <WFMGroupID/>
+   </Ticket>
+   <Ticket rowstate="Added">
+      <ticketID>27614</ticketID>
+      <ticketNumber>12866</ticketNumber>
+      <externalNumber>12866</externalNumber>
+      <externalHostID>27614</externalHostID>
+      <ticketType>ADMS</ticketType>
+      <ticketTypeGrouping>AD</ticketTypeGrouping>
+      <name>DENVER SERV SAFETY - 2014</name>
+      <description>DENVER SERV SAFETY - 2014</description>
+      <timeWindowStart>2014-01-03T00:00:00.000-06:00</timeWindowStart>
+      <timeWindowEnd>2015-01-01T00:00:00.000-06:00</timeWindowEnd>
+      <scheduledStart/>
+      <scheduledEnd/>
+      <estimatedStart/>
+      <estimatedEnd/>
+      <duration>15</duration>
+      <responseTime/>
+      <dispatchStyle/>
+      <dispatchArea>WEST EAST ZONE 2</dispatchArea>
+      <actualCreationDate/>
+      <severity/>
+      <callerName/>
+      <callerPhoneNumber/>
+      <callerDescription/>
+      <source>EBS</source>
+      <hostSource/>
+      <WFMGroupID/>
+   </Ticket>
+   <Employee rowstate="Added">
+      <ticketID>21199</ticketID>
+      <employeeID>2022</employeeID>
+      <employeeName>EDWARDS, DANIEL J</employeeName>
+      <payGrade>554</payGrade>
+   </Employee>
+   <Employee rowstate="Added">
+      <ticketID>21331</ticketID>
+      <employeeID>2022</employeeID>
+      <employeeName>EDWARDS, DANIEL J</employeeName>
+      <payGrade>554</payGrade>
+   </Employee>
+   <Employee rowstate="Added">
+      <ticketID>27447</ticketID>
+      <employeeID>2022</employeeID>
+      <employeeName>EDWARDS, DANIEL J</employeeName>
+      <payGrade>554</payGrade>
+   </Employee>
+   <Employee rowstate="Added">
+      <ticketID>27614</ticketID>
+      <employeeID>2022</employeeID>
+      <employeeName>EDWARDS, DANIEL J</employeeName>
+      <payGrade>554</payGrade>
+   </Employee>
+   <Employee rowstate="Added">
+      <ticketID>5744</ticketID>
+      <employeeID>2022</employeeID>
+      <employeeName>EDWARDS, DANIEL J</employeeName>
+      <payGrade>554</payGrade>
+   </Employee>
+   <Unit rowstate="Added">
+      <ticketID>5744</ticketID>
+      <unitID>38374</unitID>
+      <workOrderProductID/>
+      <name>SERV CC</name>
+   </Unit>
+   <Unit rowstate="Added">
+      <ticketID>27447</ticketID>
+      <unitID>538075</unitID>
+      <workOrderProductID/>
+      <name>Tune Up Talks</name>
+   </Unit>
+   <Unit rowstate="Added">
+      <ticketID>27614</ticketID>
+      <unitID>552175</unitID>
+      <workOrderProductID/>
+      <name>Safety Training</name>
+   </Unit>
+   <Unit rowstate="Added">
+      <ticketID>27614</ticketID>
+      <unitID>552178</unitID>
+      <workOrderProductID/>
+      <name>Toolbox Talks</name>
+   </Unit>
+   <Task rowstate="Added">
+      <ticketID>5744</ticketID>
+      <unitID>38374</unitID>
+      <taskID>38375</taskID>
+      <name>SERV CC</name>
+      <lineTypeID>L</lineTypeID>
+      <plannedStartDate/>
+      <plannedEndDate/>
+      <duration/>
+   </Task>
+   <Task rowstate="Added">
+      <ticketID>27447</ticketID>
+      <unitID>538075</unitID>
+      <taskID>538071</taskID>
+      <name>Mar Tune Up Talk SRV</name>
+      <lineTypeID>L</lineTypeID>
+      <plannedStartDate>2014-03-01T00:00:00.000-06:00</plannedStartDate>
+      <plannedEndDate>2014-03-31T00:00:00.000-05:00</plannedEndDate>
+      <duration/>
+   </Task>
+   <Task rowstate="Added">
+      <ticketID>27614</ticketID>
+      <unitID>552175</unitID>
+      <taskID>552176</taskID>
+      <name>Safety Training</name>
+      <lineTypeID>L</lineTypeID>
+      <plannedStartDate/>
+      <plannedEndDate/>
+      <duration/>
+   </Task>
+   <Task rowstate="Added">
+      <ticketID>27614</ticketID>
+      <unitID>552175</unitID>
+      <taskID>552177</taskID>
+      <name>OSHA Training</name>
+      <lineTypeID>L</lineTypeID>
+      <plannedStartDate/>
+      <plannedEndDate/>
+      <duration/>
+   </Task>
+   <Task rowstate="Added">
+      <ticketID>27614</ticketID>
+      <unitID>552178</unitID>
+      <taskID>552189</taskID>
+      <name>#11-Seat Belts</name>
+      <lineTypeID>L</lineTypeID>
+      <plannedStartDate>2014-03-14T00:00:00.000-05:00</plannedStartDate>
+      <plannedEndDate>2014-03-20T00:00:00.000-05:00</plannedEndDate>
+      <duration/>
+   </Task>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAVEL TM 2.0 (TC) - US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>CARTAGE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>MILEAGE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>HOLIDAY-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAVEL TM 1.5 (LOC 1 TC)-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAVEL TM 2.0 (NON-TC)-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAVEL TM 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>NON-PRODUCTIVE 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>PER DIEM-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAVEL TM 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>NON-PRODUCTIVE 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>NON-PRODUCTIVE 2.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>EXTERNAL PURCHASES</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>PERDIEM OVRNT-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>VEHICLE EXPENSE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAINING LABOR 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>NON-PRODUCTIVE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAINING LABOR-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAINING LABOR 2.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>INTERNAL PURCHASES</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>MILEAGE NOTAX-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAVEL TM 1.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>TRAINING LABOR 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>OTHER EXPENSE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>5744</ticketID>
+      <lookupID>ZONE PAY-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAVEL TM 2.0 (TC) - US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>CARTAGE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>MILEAGE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAVEL TM 1.5 (LOC 1 TC)-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAVEL TM 2.0 (NON-TC)-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>HOLIDAY-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAVEL TM 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>NON-PRODUCTIVE 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>PER DIEM-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAVEL TM 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>NON-PRODUCTIVE 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>NON-PRODUCTIVE 2.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>EXTERNAL PURCHASES</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>PERDIEM OVRNT-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>VEHICLE EXPENSE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAINING LABOR 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>NON-PRODUCTIVE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAINING LABOR-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAINING LABOR 2.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>INTERNAL PURCHASES</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>MILEAGE NOTAX-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAVEL TM 1.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>TRAINING LABOR 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>OTHER EXPENSE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27447</ticketID>
+      <lookupID>ZONE PAY-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAVEL TM 2.0 (TC) - US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>CARTAGE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>MILEAGE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAVEL TM 2.0 (NON-TC)-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>HOLIDAY-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAVEL TM 1.5 (LOC 1 TC)-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAVEL TM 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>NON-PRODUCTIVE 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>PER DIEM-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAVEL TM 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>NON-PRODUCTIVE 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>NON-PRODUCTIVE 2.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>EXTERNAL PURCHASES</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>PERDIEM OVRNT-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>VEHICLE EXPENSE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAINING LABOR 1.7-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAINING LABOR 2.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>NON-PRODUCTIVE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAINING LABOR-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>INTERNAL PURCHASES</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>MILEAGE NOTAX-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAINING LABOR 1.5-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>TRAVEL TM 1.0-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>OTHER EXPENSE-US</lookupID>
+   </ExpenditureTypeFilter>
+   <ExpenditureTypeFilter rowstate="Added">
+      <ticketID>27614</ticketID>
+      <lookupID>ZONE PAY-US</lookupID>
+   </ExpenditureTypeFilter>
+</TicketData>
