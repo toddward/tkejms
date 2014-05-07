@@ -20,7 +20,12 @@ function init() {
           }
         });
       },
-      require("./parser/ticketDataParser")
+      function(cb){
+        require("./parser/ticketDataParser").init(cb);
+      },
+      function(cb){
+        require("./parser/baseDataParser").init(cb);
+      }
     ],
     function(err) {
       if (err) {

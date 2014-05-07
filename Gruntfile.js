@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         src: 'tests/', // the folder, not the files,
         options: {
           mask: '*.js',
-          "coverageFolder": "./test/coverage"
+          "coverageFolder": "./tests/coverage"
         }
       }
     }
