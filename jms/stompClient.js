@@ -21,10 +21,11 @@ AMQService.prototype.init = function(cb) {
         self.log.error(JSON.stringify(arguments));
         cb(err);
       });
+    
     client.on("error", function(e) {
       self.log.error("AMQService error: " + JSON.stringify(arguments));
       eventBus.emit("amq_error", e);
-      client = null;
+      // client = null; // Eoin - removed as this caused uncaught exception
       client.disconnect(function() {
         self.log.info("AMQService disconnected");
       });
@@ -52,21 +53,27 @@ AMQService.prototype.init = function(cb) {
 AMQService.prototype.subscribe = function(queueName, cb) {
   var self = this;
   if (client) {
-    self.log.info("Subscribe to queues:" + queueName);
-    client.subscribe(queueName, cb);
+    self.log.info("Begin subscribe to queues:" + queueName);
+    client.subscribe(queueName, function(body,headers){
+      self.log.info("Subscribe finished:" + queueName);
+      self.log.info("Subscribe Body:", body);
+      self.log.info("Subscribe Headers:", headers);
+      cb(body,headers);
+    });
     return true;
   } else {
-    self.log.error("Try to connect queue without initialising stomp client.");
+    self.log.error("Tried to connect queue without initialising stomp client.");
     return false;
   }
 }
 AMQService.prototype.publish = function(queueName, message) {
   var self = this;
   if (client) {
+    self.log.info("Publishing Msg:",message);
     client.publish(queueName, message);
     return true;
   } else {
-    self.log.error("Try to publish message without initialising stomp client.");
+    self.log.error("Tried to publish message without initialising stomp client.");
     return false;
   }
 }
