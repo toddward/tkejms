@@ -70,6 +70,7 @@ AMQService.prototype.publish = function(queueName, message) {
   var self = this;
   if (client) {
     self.log.info("Publishing Msg:",message);
+    self.log.info("Publishing To:",queueName);
     client.publish(queueName, message);
     return true;
   } else {
