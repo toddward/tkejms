@@ -25,7 +25,6 @@ AMQService.prototype.init = function(cb) {
     client.on("error", function(e) {
       self.log.error("AMQService error: " + JSON.stringify(arguments));
       eventBus.emit("amq_error", e);
-      // client = null; // Eoin - removed as this caused uncaught exception
       client.disconnect(function() {
         self.log.info("AMQService disconnected");
       });
@@ -37,14 +36,23 @@ AMQService.prototype.init = function(cb) {
 
     client.on("disconnect", function() {
       self.log.warn("AMQService has disconnected");
-      client = null;
+      // client = null;
+
+      // Harden AMQService by attempting to reconnect automagically
+      setTimeout(function(){
+        self.log.info("Attempting to reconnect to ActiveMQ...");
+        client.connect(function(sessionId) {
+          self.log.info("Connected to: " + env.get("amq_host") + ":" + env.get("amq_port"));
+        });
+      },5000);
+
     });
   } else {
     this.log.info("AMQService has been initialised.");
     cb();
   }
 
-}
+};
 /**
  * Subscribe to a queue
  * @param  {[type]} queueName [description]
@@ -65,7 +73,7 @@ AMQService.prototype.subscribe = function(queueName, cb) {
     self.log.error("Tried to connect queue without initialising stomp client.");
     return false;
   }
-}
+};
 AMQService.prototype.publish = function(queueName, message) {
   var self = this;
   if (client) {
@@ -77,6 +85,6 @@ AMQService.prototype.publish = function(queueName, message) {
     self.log.error("Tried to publish message without initialising stomp client.");
     return false;
   }
-}
+};
 
 module.exports = new AMQService();
