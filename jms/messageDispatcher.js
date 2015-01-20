@@ -8,8 +8,13 @@ function MessageDispatcher(){
   this.msg={
     "amq_msg_ticket":"amq_msg_ticket",
     "amq_msg_basedata":"amq_msg_basedata"
-  }
-};
+  };
+}
+
+// set custom option for xml2js
+var parser = new xml2js.Parser({
+  ignoreAttrs: true
+});
 
 MessageDispatcher.prototype.init=function(cb){
   if (inited===true){
@@ -18,11 +23,11 @@ MessageDispatcher.prototype.init=function(cb){
   inited=true;
   stompClient.subscribe(env.get("tke_antenna_queue"),this.onAntennaMessage.bind(this));
   cb();
-}
+};
 
 MessageDispatcher.prototype.onAntennaMessage=function(body,headers){
   var self=this;
-  xml2js.parseString(body,function(err,result){
+  parser.parseString(body,function(err,result){
     // console.log(result);
     if (err){
       log.error("Error parse message body to json");
