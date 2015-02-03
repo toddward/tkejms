@@ -13,7 +13,7 @@ function MessageDispatcher(){
 
 // set custom option for xml2js
 var parser = new xml2js.Parser({
-  ignoreAttrs: true
+  ignoreAttrs: false
 });
 
 MessageDispatcher.prototype.init=function(cb){
