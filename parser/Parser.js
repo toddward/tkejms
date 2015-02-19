@@ -45,7 +45,7 @@ Parser.prototype._parseEmitDataArr=function(msg, data, employeeId) {
   if (data && data instanceof Array) {
     for (var i = 0; i < data.length; i++) {
       var d = data[i];
-      // var action = d.$.rowstate;
+      var action = d.rowstate;
       // delete d.$;
       self._pruneData(d);
       self._emit(msg, d, action, employeeId);
