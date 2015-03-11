@@ -8,6 +8,7 @@ function AMQService() {}
 
 AMQService.prototype.log = require("../log");
 AMQService.prototype.init = function(cb) {
+  self.logger.info('AMQ service init called');
   var self = this;
   if (client === null) {
     this.log.info("Start to initialise AMQService");
