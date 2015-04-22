@@ -34,7 +34,6 @@ MessageDispatcher.prototype.onAntennaMessage=function(body,headers){
       log.error(headers);
     }else{
       if (result["TicketData"]){
-        log.info('Ticket HEADERS:',headers);
         eventBus.emit(self.msg.amq_msg_ticket,result,parseInt(headers.EmployeeID));
       }else if (result["BaseData"]){
         eventBus.emit(self.msg.amq_msg_basedata,result,parseInt(headers.EmployeeID));

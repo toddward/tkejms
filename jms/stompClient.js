@@ -75,12 +75,12 @@ AMQService.prototype.subscribe = function(queueName, cb) {
     return false;
   }
 };
-AMQService.prototype.publish = function(queueName, message) {
+AMQService.prototype.publish = function(queueName, message, headers) {
   var self = this;
   if (client) {
     self.log.info("Publishing Msg:",message);
     self.log.info("Publishing To:",queueName);
-    client.publish(queueName, message);
+    client.publish(queueName, message, headers);
     return true;
   } else {
     self.log.error("Tried to publish message without initialising stomp client.");

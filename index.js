@@ -15,7 +15,8 @@ exports.startClient=function(option){
 exports.sendMessage = function(params,cb){
     var queueName = params.queueName || process.env.out_queue;
     var message = params.message || '<Empty message>';
-    var result = stompClient.publish(queueName,message);
+    var headers = params.headers || {};
+    var result = stompClient.publish(queueName,message,headers);
 
     if(result){
         return cb(null,"message posted");
