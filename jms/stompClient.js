@@ -80,7 +80,7 @@ AMQService.prototype.publish = function(queueName, message, headers) {
   if (client) {
     // replace unsafe XML characters
     message = escapeXml(message);
-    
+
     self.log.info("Publishing Msg:", message);
     self.log.info("Publishing To:", queueName);
     client.publish(queueName, message, headers);
@@ -98,12 +98,12 @@ function escapeXml(unsafe) {
         return '&lt;';
       case '>':
         return '&gt;';
-      case '&':
-        return '&amp;';
       case '\'':
         return '&apos;';
       case '"':
         return '&quot;';
+      case '&':
+        return '&amp;';
     }
   });
 }
