@@ -6,8 +6,7 @@
         "async": "*",
         "xml2js": "*",
         "winston": "0.7.3",
-        "stomp-client": "0.5.0",
-        "xmldom":"0.1.19"
+        "stomp-client": "0.5.0"
     },
     "devDependencies": {
         "grunt-contrib-watch": "latest",
