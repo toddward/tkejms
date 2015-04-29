@@ -6,7 +6,7 @@
         "async": "*",
         "xml2js": "*",
         "winston": "0.7.3",
-        "stomp-client":"git+https://github.com/alanmoran/node-stomp-client.git"
+        "stomp-client":"git+https://github.com/Crosbie/node-stomp-client.git"
     },
     "devDependencies": {
         "grunt-contrib-watch": "latest",
