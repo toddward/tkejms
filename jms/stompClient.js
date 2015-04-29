@@ -84,9 +84,6 @@ AMQService.prototype.subscribe = function(queueName, cb) {
 AMQService.prototype.publish = function(queueName, message, headers) {
   var self = this;
   if (client) {
-    // replace unsafe XML characters
-    message = escapeXml(message);
-
     self.log.info("Publishing Msg:", message);
     self.log.info("Publishing To:", queueName);
     client.publish(queueName, message, headers);
@@ -96,22 +93,5 @@ AMQService.prototype.publish = function(queueName, message, headers) {
     return false;
   }
 };
-
-function escapeXml(unsafe) {
-  return unsafe.replace(/[<>&'"]/g, function(c) {
-    switch (c) {
-      case '<':
-        return '&lt;';
-      case '>':
-        return '&gt;';
-      case '\'':
-        return '&apos;';
-      case '"':
-        return '&quot;';
-      case '&':
-        return '&amp;';
-    }
-  });
-}
 
 module.exports = new AMQService();
