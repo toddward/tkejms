@@ -69,13 +69,6 @@ AMQService.prototype.subscribe = function(queueName, cb) {
       self.log.info("Subscribe Headers:", headers);
       cb(body, headers);
     });
-    var destination = '/queue/jms/TKEAntenna-out-test';
-
-    console.log('Connected to test...');
-    client.subscribe(destination, function(body, headers) {
-      console.log('Message header', headers);
-      console.log('Message Body', body);
-    });
     return true;
   } else {
     self.log.error("Tried to connect queue without initialising stomp client.");
