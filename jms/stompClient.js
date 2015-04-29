@@ -11,7 +11,7 @@ AMQService.prototype.log = require("../log");
 AMQService.prototype.init = function(cb) {
   this.log.info('AMQ service init called');
   var self = this;
-  if (client === null) {
+  if (client === null && starting === false) {
     starting = true;
     this.log.info("Start to initialise AMQService");
     client = new Stomp(env.get("amq_host"), env.get("amq_port"));
@@ -52,6 +52,8 @@ AMQService.prototype.init = function(cb) {
       }, 5000);
 
     });
+  } else if (starting === true){
+    // do nothing
   } else {
     this.log.info("AMQService has been initialised.");
     cb();
