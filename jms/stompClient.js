@@ -3,6 +3,7 @@ var util = require("util");
 var Stomp = require("stomp-client");
 var env = require("../env");
 var client = null;
+var starting = false;// flag to catch 'double-starting' the client
 
 function AMQService() {}
 
@@ -11,13 +12,16 @@ AMQService.prototype.init = function(cb) {
   this.log.info('AMQ service init called');
   var self = this;
   if (client === null) {
+    starting = true;
     this.log.info("Start to initialise AMQService");
     client = new Stomp(env.get("amq_host"), env.get("amq_port"));
     client.connect(function(sessionId) {
+        starting = false;
         self.log.info("Connected to: " + env.get("amq_host") + ":" + env.get("amq_port"));
         cb();
       },
       function(err) {
+        starting = false;
         self.log.error("Failed to initialise AMQService");
         self.log.error(JSON.stringify(arguments));
         cb(err);
