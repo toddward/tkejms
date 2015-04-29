@@ -25,16 +25,3 @@ exports.sendMessage = function(params, cb) {
   }
 
 };
-
-console.log('Connecting to test...');
-var Stomp = require('stomp-client');
-var destination = '/queue/jms/TKEAntenna-out-test';
-var client = new Stomp('bridge-jms.mbaas1.tke.feedhenry.com', 61613);
-
-client.connect(function(sessionId) {
-  console.log('Connected to test...');
-  client.subscribe(destination, function(body, headers) {
-    console.log('Message header', headers);
-    console.log('Message Body', body);
-  });
-});
