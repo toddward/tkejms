@@ -22,7 +22,7 @@ AMQService.prototype.init = function(cb) {
         self.log.error(JSON.stringify(arguments));
         cb(err);
       });
-    
+
     client.on("error", function(e) {
       self.log.error("AMQService error: " + JSON.stringify(arguments));
       eventBus.emit("amq_error", e);
@@ -40,12 +40,12 @@ AMQService.prototype.init = function(cb) {
       // client = null;
 
       // Harden AMQService by attempting to reconnect automagically
-      setTimeout(function(){
+      setTimeout(function() {
         self.log.info("Attempting to reconnect to ActiveMQ...");
         client.connect(function(sessionId) {
           self.log.info("Connected to: " + env.get("amq_host") + ":" + env.get("amq_port"));
         });
-      },5000);
+      }, 5000);
 
     });
   } else {
@@ -63,11 +63,11 @@ AMQService.prototype.subscribe = function(queueName, cb) {
   var self = this;
   if (client) {
     self.log.info("Begin subscribe to queues:" + queueName);
-    client.subscribe(queueName, function(body,headers){
+    client.subscribe(queueName, function(body, headers) {
       self.log.info("Subscribe finished:" + queueName);
       self.log.info("Subscribe Body:", body);
       self.log.info("Subscribe Headers:", headers);
-      cb(body,headers);
+      cb(body, headers);
     });
     return true;
   } else {
@@ -78,8 +78,11 @@ AMQService.prototype.subscribe = function(queueName, cb) {
 AMQService.prototype.publish = function(queueName, message, headers) {
   var self = this;
   if (client) {
-    self.log.info("Publishing Msg:",message);
-    self.log.info("Publishing To:",queueName);
+    // replace unsafe XML characters
+    message = escapeXml(message);
+    
+    self.log.info("Publishing Msg:", message);
+    self.log.info("Publishing To:", queueName);
     client.publish(queueName, message, headers);
     return true;
   } else {
@@ -87,5 +90,22 @@ AMQService.prototype.publish = function(queueName, message, headers) {
     return false;
   }
 };
+
+function escapeXml(unsafe) {
+  return unsafe.replace(/[<>&'"]/g, function(c) {
+    switch (c) {
+      case '<':
+        return '&lt;';
+      case '>':
+        return '&gt;';
+      case '&':
+        return '&amp;';
+      case '\'':
+        return '&apos;';
+      case '"':
+        return '&quot;';
+    }
+  });
+}
 
 module.exports = new AMQService();
