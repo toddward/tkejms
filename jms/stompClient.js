@@ -79,7 +79,9 @@ AMQService.prototype.publish = function(queueName, message, headers) {
   var self = this;
   if (client) {
     // replace unsafe XML characters
-    message = escapeXml(message);
+    // message = escapeXml(message);
+    var DOMParser = require('xmldom').DOMParser;
+    message = new DOMParser().parseFromString(message,'text/xml');
 
     self.log.info("Publishing Msg:", message);
     self.log.info("Publishing To:", queueName);
