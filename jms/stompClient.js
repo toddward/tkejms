@@ -24,7 +24,11 @@ AMQService.prototype.init = function(cb) {
         starting = false;
         self.log.error("Failed to initialise AMQService");
         self.log.error(JSON.stringify(arguments));
-        cb(err);
+        try{
+          cb(err);
+        } catch(e) {
+          self.log.error('Exception:',e);
+        }
       });
 
     client.on("error", function(e) {
