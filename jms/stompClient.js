@@ -49,8 +49,9 @@ AMQService.prototype.init = function(cb) {
       }, 5000);
 
     });
-  } else if (starting === true){
-    // do nothing
+  } else if (client &&starting === true){
+    // do nothing, still connecting
+    this.log.info("AMQService trying to connect.");
   } else {
     this.log.info("AMQService has been initialised.");
     cb();
