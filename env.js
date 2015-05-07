@@ -13,7 +13,7 @@ Env.prototype.set=function(key,val){
 }
 
 module.exports=new Env({
-  "amq_host":"127.0.0.1",
+  "amq_host":"bridge-jms.mbaas1.tke.feedhenry.com",
   "amq_port":61613,
   "tke_antenna_queue":"/queue/jms/TKEAntennaInQueue"
 });
