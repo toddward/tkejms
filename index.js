@@ -4,7 +4,7 @@ var init = require("./init");
 var stompClient = require("./jms/stompClient");
 
 
-var startClient =exports.startClient = function(option) {
+exports.startClient = function(option) {
   for (var key in option) {
     env.set(key, option[key]);
   }
@@ -25,6 +25,3 @@ exports.sendMessage = function(params, cb) {
   }
 
 };
-
-
-startClient();

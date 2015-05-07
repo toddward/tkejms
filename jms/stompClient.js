@@ -21,22 +21,15 @@ AMQService.prototype.init = function(cb) {
         cb();
       },
       function(err) {
-        starting = false;
         self.log.error("Failed to initialise AMQService");
         self.log.error(JSON.stringify(arguments));
-        try{
-          cb(err);
-        } catch(e) {
-          self.log.error('Exception:',e);
-        }
+        starting = false;
+        return cb(err);
       });
 
     client.on("error", function(e) {
       self.log.error("AMQService error: " + JSON.stringify(arguments));
       eventBus.emit("amq_error", e);
-      client.disconnect(function() {
-        self.log.info("AMQService disconnected");
-      });
     });
     client.on("connect", function() {
       self.log.info("AMQService has connected");
