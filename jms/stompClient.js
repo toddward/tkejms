@@ -38,16 +38,7 @@ AMQService.prototype.init = function(cb) {
 
     client.on("disconnect", function() {
       self.log.warn("AMQService has disconnected");
-      // client = null;
-
-      // Harden AMQService by attempting to reconnect automagically
-      setTimeout(function() {
-        self.log.info("Attempting to reconnect to ActiveMQ...");
-        client.connect(function(sessionId) {
-          self.log.info("Connected to: " + env.get("amq_host") + ":" + env.get("amq_port"));
-        });
-      }, 5000);
-
+      eventBus.emit("amq_disconnect", self);
     });
   } else if (client &&starting === true){
     // do nothing, still connecting
