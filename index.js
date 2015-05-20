@@ -14,9 +14,9 @@ exports.startClient = function(option) {
 
 exports.sendMessage = function(params, cb) {
   var out_queue;
-  if($conf&&$conf.amqp_queues){
-    out_queue = $conf.amqp_queues.out_queue;
-  }
+  // if($conf&&$conf.amqp_queues){
+  //   out_queue = $conf.amqp_queues.out_queue;
+  // }
   var queueName = out_queue || params.queueName || process.env.out_queue;
   var message = params.message || '<Empty message>';
   var headers = params.headers || {};
