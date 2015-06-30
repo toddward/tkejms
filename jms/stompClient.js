@@ -4,6 +4,7 @@ var Stomp = require("stomp-client");
 var env = require("../env");
 var client = null;
 var starting = false;// flag to catch 'double-starting' the client
+var amqconnected = false;
 
 function AMQService() {}
 
@@ -24,23 +25,27 @@ AMQService.prototype.init = function(cb) {
         self.log.error("Failed to initialise AMQService");
         self.log.error(JSON.stringify(arguments));
         starting = false;
+        amqconnected = false;
         return cb(err);
       });
 
     client.on("error", function(e) {
       self.log.error("AMQService error: " + JSON.stringify(arguments));
+      amqconnected = false;
       eventBus.emit("amq_error", e);
     });
     client.on("connect", function() {
       self.log.info("AMQService has connected");
+      amqconnected = true;
       eventBus.emit("amq_connect", self);
     });
 
     client.on("disconnect", function() {
       self.log.warn("AMQService has disconnected");
+      amqconnected = false;
       eventBus.emit("amq_disconnect", self);
     });
-  } else if (client &&starting === true){
+  } else if (client && starting === true){
     // do nothing, still connecting
     this.log.info("AMQService trying to connect.");
   } else {
@@ -75,8 +80,13 @@ AMQService.prototype.publish = function(queueName, message, headers) {
   if (client) {
     self.log.info("Publishing Msg:", message);
     self.log.info("Publishing To:", queueName);
-    client.publish(queueName, message, headers);
-    return true;
+    if (amqconnected) {
+      client.publish(queueName, message, headers);
+      return true;
+    }else{
+      self.log.error("Stomp client disconnected.");
+      return false;
+    }
   } else {
     self.log.error("Tried to publish message without initialising stomp client.");
     return false;
