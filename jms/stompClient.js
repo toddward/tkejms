@@ -68,7 +68,7 @@ AMQService.prototype.subscribe = function(queueName, cb) {
 }
 AMQService.prototype.publish = function(queueName, message) {
   var self = this;
-  if (client) {
+  if (client && client.publishable) {
     self.log.info("Publishing Msg:",message);
     client.publish(queueName, message);
     return true;
