@@ -23,7 +23,7 @@ exports.sendMessage = function(params, cb) {
   var result = stompClient.publish(queueName, message, headers);
 
   if (result) {
-    return cb(null, "message posted");
+    return cb(null, "Ok");
   } else {
     return cb("message posting failed");
   }
