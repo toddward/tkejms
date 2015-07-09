@@ -17,7 +17,7 @@ exports.sendMessage = function(params, cb) {
   if($conf&&$conf.amqp_queues){
     out_queue = $conf.amqp_queues.out_queue;
   }
-  var queueName = out_queue || params.queueName || process.env.out_queue;
+  var queueName = params.queueName || out_queue || process.env.out_queue;
   var message = params.message || '<Empty message>';
   var headers = params.headers || {};
   var result = stompClient.publish(queueName, message, headers);
